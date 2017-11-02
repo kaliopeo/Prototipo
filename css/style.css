@@ -2,8 +2,9 @@
 	url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 .header {
+	/*background: url("../images/iieg.jpg") top left no-repeat #400080;*/
 	background:top left no-repeat #400080;
-	max-height: 115px
+	max-height: 115px;
 }
 
 .header h1 {
@@ -101,6 +102,33 @@ input {
 	margin-bottom: 1em
 }
 
+.solicitudes-enviadas h3 i {
+	float: right
+}
+
+.solicitudes-enviadas table i.fa {
+	margin-right: 0.5em
+}
+
+.solicitudes-enviadas table i.fa-check {
+	color: #89d680
+}
+
+.solicitudes-enviadas table i.fa-clock-o {
+	color: #f7b736
+}
+
+.solicitudes-enviadas .solicitud-contestada .panel-heading {
+	background-color: #89d680 !important
+}
+
+.solicitudes-enviadas .solicitud-esperando .panel-heading {
+	background-color: #f7b736 !important
+}
+
+.solicitudes-enviadas .btn-editar-solicitud {
+	float: right
+}
 /*# sourceMappingURL=style.css.map */
 
 thead th { font-size: 14px; }
