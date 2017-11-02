@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Indicadores de Género</title>
+
+<link rel="stylesheet" href="css/font-awesome.css">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script type="js/3.2.1/jquery-1-11-1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="container">
+				<div id="container_logo" class="col-md-12 col-sm-12 col-xs-12">
+					<img class="normal" src="images/logo-web.png" style="height: 100%;">
+					<h2 style="color: orange;">Sistema de Indicadores de Género - Entérate</h2>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-expanded="false" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						type="button">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="row">
+					<div class="collapse navbar-collapse"
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html"> <i class="fa fa-home"
+									aria-hidden="true"></i>
+							</a></li>
+							<li id="plataforma"><a href="plataforma.html"
+								data-toggle="tab">¿Que es la plataforma?</a></li>
+							<li id="quienes"><a href="quienessomos.html"
+								data-toggle="tab">¿Quienes somos?</a></li>
+							<li id="apoyo"><a href="apoyoinstitucional.html"
+								data-toggle="tab">Apoyo institucional</a></li>
+							<li id="denuncia"><a href="denunciaciudadana.html"
+								data-toggle="tab">Denuncia ciudadana</a>
+							<li id="contacto"><a href="contacto.html" data-toggle="tab">Contacto</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-sm-12 col-xs-12 text-right nombre-usuario">
+					<a href="loginAutoridad.html" class="btn btn-primary"> Ingresar
+						Autoridad </a> 
+				</div>
+			</div>
+		</nav>
+	</header>
+	<br>
+	<div class="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="panel panel-default" style="background-color: #400080; color: white;">
+								<div class="panel-body">
+									<ul class="nav nav-tabs">
+										<li><a href="indicadores.html">Indicadores</a>
+										<ul>
+											<li><a href="Feminicidios.html">Feminicidios</a></li>
+											<li><a href="participacionpolitica.html">Participación política</a></li>
+										</ul>
+									</li>
+										<li><a href="#">Población <span class="caret"></span></a>
+											<ul>
+												<li><a href="#">Población Jalisco</a></li>
+												<li><a href="#">Por Entidad, Mpio. Edad</a></li>
+												<li><a href="#">Población Indígena</a></li>
+											</ul></li>
+										<li><a href="#">Igualdad <span class="caret"></span></a>
+											<ul>
+												<li><a href="#">Educación</a></li>
+												<li><a href="#">Trabajo</a></li>
+												<li><a href="#">Participación Política</a></li>
+												<li><a href="#">Cultura</a></li>
+											</ul></li>
+										<li><a href="#">Violencia<span class="caret"></span></a>
+											<ul>
+												<li><a href="#">Salud</a></li>
+												<li><a href="#">Acceso a la Justicia</a></li>
+												<li><a href="#">Movilidad Segura</a></li>
+												<li><a href="#">Delitos</a></li>
+											</ul></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<h4 class="panel-title">Denuncia Ciudadana</h4>
+								</div>
+								<div class="panel-body">
+									<div class="col-md-12">
+										<div class="row">
+											<div class="col-md-12">
+												<label for="codigo">Datos del ofendido y/o
+													denunciante </label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-1">
+												<label> Nombres: </label>
+											</div>
+											<div class="col-md-11">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-1">
+												<label> Apellido Paterno: </label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-1">
+												<label> Apellido Materno: </label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-1">
+												<label> Edad: </label>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-1">
+												<label for="codigo">Calle: </label>
+											</div>
+											<div class="col-md-10">
+												<input type="text" max="30" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">No. Exterior: </label>
+											</div>
+											<div class="col-md-2">
+												<input type="text" max="50" class="form-control">
+											</div>
+											<div class="col-md-1">
+												<label for="codigo">Sexo: </label>
+											</div>
+											<div class="col-md-3">
+												<select class="form-control">
+													<option>Femenimo</option>
+													<option>Masculino</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Estado: </label>
+											</div>
+											<div class="col-md-10">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Municipio: *</label>
+											</div>
+											<div class="col-md-10">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Localidad: </label>
+											</div>
+											<div class="col-md-10">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Colonia: </label>
+											</div>
+											<div class="col-md-10">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Correo electrónico: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+											<div class="col-md-2">
+												<label for="codigo">Doc. de identificación: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Ocupación: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+											<div class="col-md-2">
+												<label for="codigo">Otra ocupación: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Estado Civil: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+											<div class="col-md-2">
+												<label for="codigo">Teléfono: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Grado de escolaridad: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+											<div class="col-md-2">
+												<label for="codigo">Hijos: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<label for="codigo">Denuncia de los Hechos</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<label for="codigo">Tipo de denuncia: </label>
+											</div>
+											<div class="col-md-8">
+												<select class="form-control">
+													<option>Acoso</option>
+													<option>Asalto</option>
+													<option>Robo</option>
+													<option>Discriminación</option>
+													<option>Misoginia</option>
+													<option>Violencia psicológica</option>
+													<option>Violencia patrimonial</option>
+													<option>Violencia económica</option>
+													<option>Violencia sexual</option>
+													<option>Otro</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="codigo">Conoces al victimario/a: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div>
+											<div class="col-md-6">
+												<label for="codigo">Es la primera vez que paso algo
+													como lo ocurrido: </label>
+											</div>
+											<div class="col-md-4">
+												<input type="text" max="80" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<label for="codigo">Cuando, donde y a que hora</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-1">
+												<label for="codigo">Fecha: </label>
+											</div>
+											<div class="col-md-2">
+												<input type="text"class="form-control">
+											</div>
+											<div class="col-md-1">
+												<label for="codigo">Hora: </label>
+											</div>
+											<div class="col-md-2">
+												<input type="text"class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<label for="codigo">Cómo sucedio:
+												</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<textarea rows="2" cols="80" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<label for="codigo">Describa brevemente lo sucedido:
+												</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<textarea rows="3" cols="80" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="row" align="right">
+											<div class="col-md-9"></div>
+											<div class="col-md-3">
+												<input type="button" name="enviar" value="Enviar"
+													class="btn btn-primary">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<label>*La “Denuncia ciudadana” permite sistematizar
+								información que proveen los ciudadanos de manera ágil. </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

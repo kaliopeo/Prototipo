@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Indicadores de Género</title>
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.dataTables.min.css">
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/tabletoolsFeminicidios.js"></script>
+
+<style>
+#map {
+	width: 1014px;
+	height: 574px;
+}
+</style>
+<title></title>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="container">
+				<div id="container_logo" class="col-md-12 col-sm-12 col-xs-12">
+					<img class="normal" src="images/logo-web.png" style="height: 100%;">
+					<h2 style="color: orange;">Sistema de Indicadores de Género -
+						Entérate</h2>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-expanded="false" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						type="button">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="row" style="background-color: orange;">
+					<div class="collapse navbar-collapse"
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav" style="color: white;">
+							<li><a href="index.html"> <i class="fa fa-home"
+									aria-hidden="true"></i>
+							</a></li>
+							<li id="plataforma"><a href="plataforma.html">¿Que es la
+									plataforma?</a></li>
+							<li id="quienes"><a href="quienessomos.html">¿Quienes
+									somos?</a></li>
+							<li id="apoyo"><a href="apoyoinstitucional.html">Apoyo
+									institucional</a></li>
+							<li id="denuncia"><a href="denunciaciudadana.html">Denuncia
+									ciudadana</a>
+							<li id="contacto"><a href="contacto.html">Contacto</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-sm-12 col-xs-12 text-right nombre-usuario">
+					<a href="loginAutoridad.html" class="btn btn-primary"> Ingresar
+						Autoridad </a> 
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="container">
+			<div class="col-md-3">
+				<div class="panel panel-default"
+					style="background-color: #400080; color: white;">
+					<div class="panel-body">
+						<ul class="nav nav-tabs">
+							<li><a href="indicadores.html">Indicadores</a>
+								<ul>
+									<li><a href="Feminicidios.html">Feminicidios</a></li>
+									<li><a href="participacionpolitica.html">Participación política</a></li>
+								</ul></li>
+							<li><a href="#">Población <span class="caret"></span></a>
+								<ul>
+									<li><a href="#">Población Jalisco</a></li>
+									<li><a href="#">Por Entidad, Mpio. Edad</a></li>
+									<li><a href="#">Población Indígena</a></li>
+								</ul></li>
+							<li><a href="#">Igualdad <span class="caret"></span></a>
+								<ul>
+									<li><a href="#">Educación</a></li>
+									<li><a href="#">Trabajo</a></li>
+									<li><a href="#">Participación Política</a></li>
+									<li><a href="#">Cultura</a></li>
+								</ul></li>
+							<li><a href="#">Violencia<span class="caret"></span></a>
+								<ul>
+									<li><a href="#">Salud</a></li>
+									<li><a href="#">Acceso a la Justicia</a></li>
+									<li><a href="#">Movilidad Segura</a></li>
+									<li><a href="#">Delitos</a></li>
+								</ul></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4 class="page-header panel-title" id="linkArticulo">Indicador Feminicidios</h4>
+					</div>
+					<div class="panel-body" style='width: 100%; height: 100%;'>
+						<div id="map"></div>
+						<div id="graf1"></div>
+						<div id="tbl">
+							<table id="tablaFeminicidios" class="display">
+								<tr>
+									<th>MUNICPIOS</th>
+									<th>2013</th>
+									<th>2014</th>
+									<th>2015</th>
+									<th>2016</th>
+									<th>2017</th>
+								</tr>
+								<tr>
+									<td>ACATIC</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ACATLAN DE<br> JUAREZ
+									</td>
+									<td>3</td>
+									<td>5</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>AHUALULCO DE<br> MERCADO
+									</td>
+									<td>5</td>
+									<td>6</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>AMACUECA</td>
+									<td>5</td>
+									<td>8</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>AMATITAN</td>
+									<td>5</td>
+									<td>1</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>AMECA</td>
+									<td>1</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ARANDAS</td>
+									<td>5</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ATEMAJAC DE<br> BRIZUELA
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ATENGO</td>
+									<td>2</td>
+									<td>1</td>
+									<td>0</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>ATENGUILLO</td>
+									<td>3</td>
+									<td>2</td>
+									<td>4</td>
+									<td>9</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ATOTONILCO EL<br> ALTO
+									</td>
+									<td>4</td>
+									<td>2</td>
+									<td>0</td>
+									<td>8</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ATOYAC</td>
+									<td>5</td>
+									<td>3</td>
+									<td>2</td>
+									<td>4</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>AUTLAN DE<br> NAVARRO
+									</td>
+									<td>8</td>
+									<td>0</td>
+									<td>5</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>AYOTLAN</td>
+									<td>9</td>
+									<td>0</td>
+									<td>5</td>
+									<td>3</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>AYUTLA</td>
+									<td>1</td>
+									<td>0</td>
+									<td>5</td>
+									<td>6</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>BOLA�OS</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CABO<br> CORRIENTES
+									</td>
+									<td>10</td>
+									<td>4</td>
+									<td>4</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CA�ADAS DE<br> OBREGON
+									</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>CASIMIRO<br> CASTILLO
+									</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CHAPALA</td>
+									<td>57</td>
+									<td>0</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>CHIMALTITAN</td>
+									<td>9</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>CHIQUILISTLAN</td>
+									<td>2</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>CIHUATLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>COCULA</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>COLOTLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CONCEPCION DE<br> BUENOS AIRES
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CUAUTITLAN DE<br> GARCIA BARRAGAN
+									</td>
+									<td>5</td>
+									<td>4</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CUAUTLA</td>
+									<td>9</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>CUQUIO</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>DEGOLLADO</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>EJUTLA</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>EL ARENAL</td>
+									<td>0</td>
+									<td>4</td>
+									<td>0</td>
+									<td>1</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>EL GRULLO</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>1</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td>EL LIMON</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>7</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>EL SALTO</td>
+									<td>2</td>
+									<td>4</td>
+									<td>4</td>
+									<td>8</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>ENCARNACION DE<br> DIAZ
+									</td>
+									<td>9</td>
+									<td>5</td>
+									<td>2</td>
+									<td>9</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ETZATLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>4</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>GOMEZ FARIAS</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>GUACHINANGO</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>6</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>GUADALAJARA</td>
+									<td>50</td>
+									<td>1</td>
+									<td>6</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>HOSTOTIPAQUILLO</td>
+									<td>5</td>
+									<td>2</td>
+									<td>0</td>
+									<td>2</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>HUEJUCAR</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>3</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>HUEJUQUILLA EL<br> ALTO
+									</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>IXTLAHUACAN DE<br> LOS MEMBRILLOS
+									</td>
+									<td>5</td>
+									<td>1</td>
+									<td>1</td>
+									<td>3</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>IXTLAHUACAN<br> DEL RIO
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>JALOSTOTITLAN</td>
+									<td>0</td>
+									<td>4</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>JAMAY</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>JESUS MARIA</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>54</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>JILOTLAN DE<br> LOS DOLORES
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>JOCOTEPEC</td>
+									<td>4</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>JUANACATLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>JUCHITLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>LA BARCA</td>
+									<td>5</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>LA HUERTA</td>
+									<td>8</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>LA MANZANILLA<br> DE LA PAZ
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>LAGOS DE<br> MORENO
+									</td>
+									<td>8</td>
+									<td>5</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>MAGDALENA</td>
+									<td>8</td>
+									<td>9</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>MASCOTA</td>
+									<td>8</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>MAZAMITLA</td>
+									<td>0</td>
+									<td>8</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>MEXTICACAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>MEZQUITIC</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>MIXTLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>OCOTLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>OJUELOS DE<br> JALISCO
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>PIHUAMO</td>
+									<td>9</td>
+									<td>10</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>PONCITLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>PUERTO<br> VALLARTA
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>QUITUPAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN CRISTOBAL<br> DE LA BARRANCA
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN DIEGO DE<br> ALEJANDRIA
+									</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN GABRIEL</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+									<td>4</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN IGNACIO<br> CERRO GORDO
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN JUAN DE<br> LOS LAGOS
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN JUANITO DE<br> ESCOBEDO
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN JULIAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN MARCOS</td>
+									<td>2</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN MARTIN DE<br> BOLA�OS
+									</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN MARTIN DE<br> HIDALGO
+									</td>
+									<td>0</td>
+									<td>5</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SAN MIGUEL EL<br> ALTO
+									</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td>SAN PEDRO<br> TLAQUEPAQUE
+									</td>
+									<td>2</td>
+									<td>2</td>
+									<td>1</td>
+									<td>5</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>SAN SEBASTIAN<br> DEL OESTE
+									</td>
+									<td>5</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>SANTA MARIA DE<br> LOS ANGELES
+									</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>17</td>
+								</tr>
+								<tr>
+									<td>SANTA MARIA<br> DEL ORO
+									</td>
+									<td>0</td>
+									<td>3</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>SAYULA</td>
+									<td>0</td>
+									<td>3</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TALA</td>
+									<td>0</td>
+									<td>3</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TALPA DE<br> ALLENDE
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TAMAZULA DE<br> GORDIANO
+									</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>15</td>
+								</tr>
+								<tr>
+									<td>TAPALPA</td>
+									<td>1</td>
+									<td>0</td>
+									<td>1</td>
+									<td>13</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TECALITLAN</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TECHALUTA DE<br> MONTENEGRO
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>17</td>
+								</tr>
+								<tr>
+									<td>TECOLOTLAN</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>TENAMAXTLAN</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>5</td>
+									<td>19</td>
+								</tr>
+								<tr>
+									<td>TEOCALTICHE</td>
+									<td>10</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>TEOCUITATLAN<br> DE CORONA
+									</td>
+									<td>8</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TEPATITLAN DE<br> MORELOS
+									</td>
+									<td>0</td>
+									<td>1</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TEQUILA</td>
+									<td>0</td>
+									<td>1</td>
+									<td>3</td>
+									<td>2</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TEUCHITLAN</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>TIZAPAN EL<br> ALTO
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>6</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>TLAJOMULCO DE<br> ZU�IGA
+									</td>
+									<td>5</td>
+									<td>10</td>
+									<td>6</td>
+									<td>6</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>TOLIMAN</td>
+									<td>5</td>
+									<td>0</td>
+									<td>6</td>
+									<td>0</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>TOMATLAN</td>
+									<td>8</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td>TONALA</td>
+									<td>5</td>
+									<td>1</td>
+									<td>5</td>
+									<td>0</td>
+									<td>18</td>
+								</tr>
+								<tr>
+									<td>TONAYA</td>
+									<td>9</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TONILA</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+									<td>4</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TOTATICHE</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TOTOTLAN</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TUXCACUESCO</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TUXCUECA</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>TUXPAN</td>
+									<td>5</td>
+									<td>5</td>
+									<td>10</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>UNION DE SAN<br> ANTONIO
+									</td>
+									<td>9</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>UNION DE TULA</td>
+									<td>7</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>VALLE DE<br> GUADALUPE
+									</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>VALLE DE<br> JUAREZ
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>VILLA CORONA</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>VILLA GUERRERO</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>VILLA HIDALGO</td>
+									<td>0</td>
+									<td>0</td>
+									<td>8</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>VILLA<br> PURIFICACION
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>8</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>YAHUALICA DE<br> GONZALEZ GALLO
+									</td>
+									<td>0</td>
+									<td>1</td>
+									<td>8</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZACOALCO DE<br> TORRES
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>8</td>
+									<td>6</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZAPOPAN</td>
+									<td>7</td>
+									<td>2</td>
+									<td>8</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZAPOTILTIC</td>
+									<td>8</td>
+									<td>1</td>
+									<td>8</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZAPOTITLAN DE<br> VADILLO
+									</td>
+									<td>8</td>
+									<td>0</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZAPOTLAN DEL<br> REY
+									</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZAPOTLAN EL<br> GRANDE
+									</td>
+									<td></td>
+									<td>0</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>ZAPOTLANEJO</td>
+									<td>9</td>
+									<td>1</td>
+									<td>1</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>SE IGNORA</td>
+									<td>9</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>TOTAL</td>
+									<td>423</td>
+									<td>169</td>
+									<td>159</td>
+									<td>232</td>
+									<td>269</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<script src="js/expressions.js"></script>
+				<script src="js/leaflet.js"></script>
+				<script src="js/leaflet.rotatedMarker.js"></script>
+				<script src="js/leaflet-hash.js"></script>
+				<script src="js/Autolinker.min.js"></script>
+				<script src="data/FeminicidiosJalisco20130.js"></script>
+				<script src="data/FeminicidiosJalisco20141.js"></script>
+				<script src="data/FeminicidiosJalisco20152.js"></script>
+				<script src="data/FeminicidiosJalisco20163.js"></script>
+				<script src="data/FeminicidiosJalisco20174.js"></script>
+				<script src="js/femjal.js"></script>
+				<script src="js/loader.js"></script>
+				<script src="js/grafica.js"></script>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

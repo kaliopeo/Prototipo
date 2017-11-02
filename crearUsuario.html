@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Indicadores de Género</title>
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.dataTables.min.css">
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="header">
+			<div class="container">
+				<div id="container_logo" class="col-md-12 col-sm-12 col-xs-12">
+					<img class="normal" src="images/logo-web.png" style="height: 100%;">
+					<h2 style="color: orange;">Sistema de Indicadores de Género - Entérate</h2>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-expanded="false" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						type="button">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="row">
+					<div class="collapse navbar-collapse"
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="administrador.html"> <i class="fa fa-home"
+									aria-hidden="true"></i>
+							</a></li>
+							<li id=""><a href="crearUsuario.html">Crear Usuario</a></li>
+								<li id=""><a href="#">Generar Reportes</a></li>
+								<li id=""><a href="loginAdministrador.html">Salir</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<br>
+	<div class="main">
+		<div class="container">
+			<div class="row">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Catálogo de Usuarios</h3>
+					</div>
+					<div class="panel-body">
+						<div class="col-md-12 col-sm-12 col-xs-12 text-right">
+							<form class="form-horizontal" id="formusuario" method="post"
+								name="formusuario" action="#">
+								<div class="row">
+									<label class="col-sm-3 control-label">Apellido Paterno</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="paterno"
+											name="paterno" required="required" value="">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 control-label">Apellido Materno</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="materno"
+											name="materno" value="">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 control-label">Nombres</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="nombres"
+											name="nombres" required="required" value="">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 control-label">Nombre de usuario
+										(ejemplo: pedro.perez):</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="nombreusuario"
+											name="nombreusuario" required="required"
+											style="text-transform: lowercase;" value="">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 control-label">Contraseña (dejar
+										en blanco sino se desea cambiar):</label>
+									<div class="col-sm-4">
+										<input type="password" id="passwd" name="passwd"
+											class="form-control" style="text-transform: none;">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 control-label">Repetir
+										contraseña (dejar en blanco sino se desea cambiar):</label>
+									<div class="col-sm-4">
+										<input type="password" id="passwd2" name="passwd2"
+											class="form-control" style="text-transform: none;">
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-sm-3 control-label">Permisos</label>
+									<div class="col-md-9 text-left">
+										<select id="permisos" name="permisos" class="form-control">
+											<option>Autoridad</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="row action-buttons-row">
+									<div class="col-md-11 text-right">
+										<button class="btn btn-primary" type="button"
+											form="formusuario">
+											<i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar
+										</button>
+										<a href="administrador.html" class="btn btn-primary"> <i
+											class="fa fa-ban" aria-hidden="true"></i> Cancelar
+										</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

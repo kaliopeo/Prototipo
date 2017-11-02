@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Indicadores de Género</title>
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.dataTables.min.css">
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/tabletoolsListadoUsuarios.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="container">
+				<div id="container_logo" class="col-md-12 col-sm-12 col-xs-12">
+					<img class="normal" src="images/logo-web.png" style="height: 100%;">
+					<h2 style="color: orange;">Sistema de Indicadores de Género - Entérate</h2>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-expanded="false" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						type="button">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="collapse navbar-collapse"
+							id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="administrador.html"> <i class="fa fa-home"
+										aria-hidden="true"></i>
+								</a></li>
+								<li id=""><a href="crearUsuario.html">Crear Usuario</a></li>
+								<li id=""><a href="#">Generar Reportes</a></li>
+								<li id=""><a href="loginAdministrador.html">Salir</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div
+							class="col-md-11 col-sm-11 col-xs-12 text-right nombre-usuario">
+							Bienvenido, <strong> Administrador </strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<br>
+	<div class="main">
+		<div class="container">
+			<div class="row">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Listado de Usuarios</h3>
+					</div>
+					<div class="panel-body">
+						<form action="#" method="post" id="formusuarios"
+							name="formusuarios">
+							<input type="hidden" name="idusuario" id="idusuario">
+							<table id="listadousuarios" class="display">
+								<thead style="background-color: maroon; color: white;">
+									<tr>
+										<th>Usuario</th>
+										<th>Nombre Completo</th>
+										<th>Permisos</th>
+										<td></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>juan.perez</td>
+										<td>Juan Pérez González</td>
+										<td>Role Autoridad</td>
+										<td><a href="editaUsuario.html" class="btn btn-primary">
+												Editar </a> </td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

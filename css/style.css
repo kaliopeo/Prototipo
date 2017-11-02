@@ -1,0 +1,108 @@
+@import
+	url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.header {
+	background:top left no-repeat #400080;
+	max-height: 115px
+}
+
+.header h1 {
+	font-size: 36px;
+	font-weight: 700;
+	margin: 5px 0 0 0
+}
+
+.header h2 {
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0
+}
+
+.header h1, .header h2 {
+	font-family: 'Montserrat', sans-serif;
+	color: #404040
+}
+
+.header #container_logo {
+	float: left;
+	margin: 10px
+}
+
+#navbar a {
+	padding-top: 5px
+}
+
+#navbar .block_title_responsive {
+	margin: 2px 1.5em
+}
+
+#navbar .navbar-toggle {
+	margin-top: 0
+}
+
+#navbar .dropdown-toggle:hover� .dropdown-menu {
+	display: block
+}
+
+.main {
+	max-width: 1170px;
+	margin: auto auto 5em auto
+}
+
+#tab-traslado {
+	display: block
+}
+
+.nombre-usuario {
+	margin-top: 0.5em;
+	font-size: 0.8em
+}
+
+footer {
+	color: #949dac;
+	background: #2f3237;
+	padding: 0.8em
+}
+
+footer #footer-logo {
+	height: 85px
+}
+
+footer #footer-brand {
+	height: 40px
+}
+
+legend {
+	margin-top: 1em
+}
+
+input {
+	width: 100%
+}
+
+.form-control {
+	margin-bottom: 3px
+}
+
+.action-buttons-row {
+	margin-top: 2em
+}
+
+.navbar-collapse {
+	background-color: #f8f8f8
+}
+
+.modal-dialog {
+	background: white
+}
+
+.ms-container {
+	width: 100%;
+	margin-bottom: 1em
+}
+
+/*# sourceMappingURL=style.css.map */
+
+thead th { font-size: 14px; }
+
+td { font-size: 12px; }

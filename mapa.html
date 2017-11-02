@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Indicadores de Género</title>
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/leaflet.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="container">
+				<div id="container_logo" class="col-md-12 col-sm-12 col-xs-12">
+					<img class="normal" src="images/logo-web.png" style="height: 100%;">
+					<h2 style="color: orange;">Sistema de Indicadores de Género - Entérate</h2>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-expanded="false" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						type="button">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12 text-right nombre-usuario">
+					<a href="loginAutoridad.html" class="btn btn-default"> Ingresar
+						Autoridad </a> 
+				</div>
+			</div>
+		</nav>
+	</header>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div id="piechart_div" style="border: 1px solid #ccc"></div>
+			</div>
+			<div class="col-md-6">
+				<div id="barchart_div" style="border: 1px solid #ccc"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<div id="map" class="map"></div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript"
+			src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="js/leaflet.js"></script>
+		<script type="text/javascript" src="js/charts.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+	</div>
+</body>
+<footer>
+	<div class="row">
+		<div class="col-md-2 col-sm-2 text-right">
+			<img id="footer-logo" src="images/logo_jalisco.svg" class="hidden-xs">
+		</div>
+		<div class="col-md-8 col-sm-8 col-xs-12 text-center">
+			<p>Desarrollado por KALIOPEO</p>
+			<p>Derechos reservados &copy; 2017</p>
+			<p>Numero de visitas: 2017</p>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<img id="footer-brand" src="images/jalisco.svg" class="hidden-xs">
+		</div>
+	</div>
+</footer>
+</html>
